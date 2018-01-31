@@ -1,0 +1,13 @@
+<div>
+    <h1>Upcoming Angular 2 Events</h1>
+    <hr/>
+    <div class="row">
+        <div *ngFor="let event of events" class="col-md-5">
+        <event-thumbnail #thumbnail 
+             [eventinput]="event"></event-thumbnail>
+        </div>
+    </div>
+</div>
+
+<!--/*(eventClick)="handleEventClicked($event)"
+<button class="btn btn-primary" (click)="thumbnail.logVijay()">Log me Some</button>*/-->
