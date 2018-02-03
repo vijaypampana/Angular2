@@ -1,14 +1,16 @@
 <div class="well hoverwell thumbnail">
-    <h2>{{eventinput.name}}</h2>
+    <h2 class="yellow">{{eventinput.name}}</h2>
     <div>Date: {{eventinput.date}}</div>
-    <div [ngSwitch]="eventinput?.time">
+    <div [style.color]="eventinput?.time === '8:00 am' ? '#003300' : '#bbb'" [ngSwitch]="eventinput?.time">
         Time: {{eventinput.time}}
         <span *ngSwitchCase="'8:00 am'"> Early Start</span>
         <span *ngSwitchCase="'10:00 am'"> Late Start</span>
         <span *ngSwitchDefault> Normal start</span>
     </div>
     <div>Price: ${{eventinput.price}}</div>
-    <div [hidden]="!eventinput?.location">
+    <!--div [ngStyle]="{'color': eventinput?.time === '8:00 am' ? '#003300' : '#bbb', 'font-weight': eventinput?.time === '9:00 am' ? 'bold' : 'normal'}">Custom Text</div-->
+    <div [hidden]="!eventinput?.location" 
+        [ngStyle]="getStartTimeStyle()">
         <span>Location: {{eventinput.location?.address}}</span>
         <span>&nbsp;</span>
         <span>{{eventinput.location?.city}} {{eventinput.location?.state}} {{eventinput.location?.zip}}</span>
