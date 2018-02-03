@@ -8,8 +8,8 @@ import { EventThumbNail } from './events/event-thumbnail.component';
 import { NavigationController } from './navbar/navbar.component';
 import { EventService } from './services/event.service';
 import { EventDetailsComponent } from './events/event-details/event-details.component';
-import { RouterModule } from '@angular/router/src/router_module';
-import { appRoutes } from './routes'
+import { appRoutes } from './routes';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
     imports:    [
