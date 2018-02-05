@@ -1,5 +1,6 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core'
 import { EventListComponent } from './events-list.component';
+import { IEvents } from '../common/index';
 
 @Component({
     selector: 'event-thumbnail',
@@ -7,7 +8,7 @@ import { EventListComponent } from './events-list.component';
     styleUrls:['app/events/event-thumbnail.component.css']
 })
 export class EventThumbNail {
-    @Input() eventinput: any
+    @Input() eventinput: IEvents
     @Output() eventClick = new EventEmitter()
 
     handleClickMe() {
