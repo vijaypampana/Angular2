@@ -7,13 +7,16 @@ import { EventService } from '../services/event.service';
 })
 export class EventListComponent implements OnInit  {
 
-    events:any[]
+    events:any
     constructor(private eventService: EventService, private toastr: ToastrService) {
         
     }
 
     ngOnInit() {
-      this.events = this.eventService.getEvents()
+      this.eventService.getEvents().subscribe( events => {
+          this.events = events
+      });
+      
     }
 
     handleEventClicked(data) {

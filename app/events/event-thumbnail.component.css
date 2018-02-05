@@ -1,0 +1,23 @@
+.thumbnail { 
+    min-height: 260px;
+}
+
+.padding-10 {
+    margin-Top: 15px;
+}
+
+.yellow {
+    color:yellow; 
+    font-weight:bold; 
+    text-align: center; 
+    text-transform:uppercase;
+}
+
+.green {
+    color: green !important;
+    
+}
+
+.bold {
+    font-weight: bold;
+}
