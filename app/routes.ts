@@ -1,10 +1,13 @@
-import { CreateEventComponent } from './events/createEvent/create.event.component';
-import { EventDetailsComponent } from './events/event-details/event-details.component';
-import { EventListComponent } from './events/events-list.component';
+import {
+    CreateEventComponent,
+    EventDetailsComponent,
+    EventListComponent,
+    EventRouteActivator,
+    EventListResolver
+} from './events/index'
 import { Routes } from '@angular/router'
 import { Error404Component } from './common/error/404.component';
-import { EventRouteActivator } from './events/event-details/event-route-activator.service';
-import { EventListResolver } from './events/event-list-resolver.service';
+
 
 export const appRoutes: Routes = [
     {
@@ -30,6 +33,10 @@ export const appRoutes: Routes = [
         path: '',
         redirectTo: '/events',
         pathMatch: 'full'
+    },
+    {
+        path: 'user',
+        loadChildren:'app/user/user.module#UserModule'
     }
 ]
 

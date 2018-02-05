@@ -1,6 +1,8 @@
+import { ActivatedRoute } from '@angular/router';
 import { ToastrService } from './../common/toastr.service';
 import { Component, OnInit  } from '@angular/core'
 import { EventService } from '../services/event.service';
+
 
 @Component({
     templateUrl: 'app/events/events-list.component.html'
@@ -8,14 +10,17 @@ import { EventService } from '../services/event.service';
 export class EventListComponent implements OnInit  {
 
     events:any
-    constructor(private eventService: EventService, private toastr: ToastrService) {
+    constructor(private eventService: EventService, private toastr: ToastrService, private route:ActivatedRoute) {
         
     }
 
     ngOnInit() {
-      this.eventService.getEvents().subscribe( events => {
-          this.events = events
-      });
+
+        //Below code is no longer needed as we are using resolver in route.ts and created a new provider, now we can directly read events data
+    //   this.eventService.getEvents().subscribe( events => {
+    //       this.events = events
+    //   });
+        this.events = this.route.snapshot.data['events']
       
     }
 
