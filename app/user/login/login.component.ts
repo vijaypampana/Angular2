@@ -10,13 +10,10 @@ import { AuthService } from '../auth/auth.service';
 export class LoginComponent {
 
     constructor(private auth:AuthService, private route:Router) {}
-    private userName: string
-    private password: string
-
+    
     login(loginForm:any) {
-        console.log(loginForm)
         this.auth.loginUser(loginForm.userName,loginForm.password)
-        this.route.navigate(['/events'])
+        this.route.navigate(['/user/profile'])
     }
 
     cancel() {
