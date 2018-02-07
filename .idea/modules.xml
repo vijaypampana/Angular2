@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ng2-fundamentals.iml" filepath="$PROJECT_DIR$/ng2-fundamentals.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../firstApp/springboot-groovy.iml" filepath="$PROJECT_DIR$/../firstApp/springboot-groovy.iml" />
     </modules>
   </component>
 </project>

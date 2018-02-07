@@ -6,11 +6,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="springboot-groovy" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="myfirst.spring.project" target="1.8" />
       <module name="myfirstspringproject" target="1.8" />
+      <module name="springboot-groovy" target="1.8" />
       <module name="SpringBootApplication" target="1.8" />
     </bytecodeTargetLevel>
   </component>

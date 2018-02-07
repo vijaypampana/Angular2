@@ -5,6 +5,7 @@
       <list>
         <option value="$PROJECT_DIR$/myfirstspringproject/pom.xml" />
         <option value="$PROJECT_DIR$/SpringBootApplication/pom.xml" />
+        <option value="$PROJECT_DIR$/../firstApp/pom.xml" />
       </list>
     </option>
   </component>
